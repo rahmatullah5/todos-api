@@ -55,7 +55,7 @@ RSpec.describe 'Todos API', type: :request do
   # Test suite for POST /todos
   describe 'POST /todos' do
     # valid payload
-    let(:valid_attributes) { { title: 'Learn Elm'} }
+    let(:valid_attributes) { { title: 'Learn Elm' } }
 
     context 'when the request is valid' do
       before { post '/todos', params: valid_attributes }
@@ -75,7 +75,7 @@ RSpec.describe 'Todos API', type: :request do
       it 'returns status code 422' do
         expect(response).to have_http_status(422)
       end
-      
+
       it 'returns a failure message' do
         expect(response.body).to match(/Validation failed: Title can't be blank/)
       end
