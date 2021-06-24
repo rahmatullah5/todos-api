@@ -84,7 +84,7 @@ RSpec.describe 'Items API' do
       end
 
       it 'returns a failure message' do
-        expect(response.body).to match(/Validation failed: Name can't be blank/)
+        expect(response.body).to match("{\"name\":[\"can't be blank\"]}")
       end
     end
   end
